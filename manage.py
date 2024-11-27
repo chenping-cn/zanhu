@@ -5,7 +5,8 @@ import sys
 from pathlib import Path
 from pymysql import install_as_MySQLdb
 
-if __name__ == "__main__":
+
+def main():
     install_as_MySQLdb()
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
 
@@ -32,3 +33,6 @@ if __name__ == "__main__":
     sys.path.append(str(current_path / "zanhu"))
 
     execute_from_command_line(sys.argv)
+
+if __name__ == "__main__":
+    main()
